@@ -21,8 +21,12 @@ function render_frame(A, B) {
 
     const canvas = document.querySelector(".myCanvas")
     const ctx = canvas.getContext("2d");
+    
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    ctx.translate(width/2, height/2);
+    ctx.save();
 
         //Defining canvas constants
     const width = 1024;

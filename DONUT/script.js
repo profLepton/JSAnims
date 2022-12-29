@@ -1,10 +1,18 @@
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-var cw = canvas.width = window.innerWidth;
-var ch = canvas.height = window.innerHeight;
 
-const width = innerWidth/2;
-const height = innerHeight/2;
+
+
+const width = innerWidth/3;
+const height = innerHeight/3;
+
+
+
+var cw = canvas.width = width;
+var ch = canvas.height = height;
+
+
+
 
 const R1 = 0.5;
 const R2 = 1;
@@ -35,8 +43,8 @@ function draw() {
 
 
 function getColors(A, B){
-        const theta_spacing = 0.07;
-        const phi_spacing = 0.02;
+        const theta_spacing = 0.01;
+        const phi_spacing = 0.01;
     
     
         var cosA = Math.cos(A);
