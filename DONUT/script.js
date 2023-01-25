@@ -3,8 +3,8 @@ var ctx = canvas.getContext('2d');
 
 
 
-const width = innerWidth/3;
-const height = innerHeight/3;
+const width = innerWidth/2;
+const height = innerHeight/2;
 
 
 
@@ -43,8 +43,8 @@ function draw() {
 
 
 function getColors(A, B){
-        const theta_spacing = 0.01;
-        const phi_spacing = 0.01;
+        const theta_spacing = 0.07;
+        const phi_spacing = 0.02;
     
     
         var cosA = Math.cos(A);

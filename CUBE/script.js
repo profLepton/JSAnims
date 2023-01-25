@@ -4,7 +4,7 @@ var cw = canvas.width = window.innerWidth;
 var ch = canvas.height = window.innerHeight;
 
 
-const width = innerWidth/3;
+const width = innerWidth/2;
 const height = innerHeight/3;
 
 const cubeWidth = 50;
@@ -70,13 +70,13 @@ function getLuminance(A, B, C){
 
     // Calculating the luminance index.
         var L = 1;
-
-        for(let i=0; i< cubeWidth; i++){
-            for (let j=0; j< cubeWidth; j++) {
-                for (let k=0; k< cubeWidth; k++) {
+        var resolution = 2;
+        for(let i=-cubeWidth/2; i< cubeWidth/2; i+= resolution){
+            for (let j=-cubeWidth/2; j< cubeWidth/2; j+= resolution) {
+                for (let k=-cubeWidth/2; k< cubeWidth/2; k+=resolution) {
                     var x = getX(i, j, k, A, B, C);
                     var y = getY(i, j, k, A, B, C);
-                    var z = getZ(i, j, k, A, B, C);
+                    var z = 10 * getZ(i, j, k , A, B, C) ;
                     var ooz = 1/z;
                     var xp = Math.floor(width/2 + width/2 * ooz * x);
                     var yp = Math.floor(height/2 + height/2 * ooz * y);
